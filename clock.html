@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class='😀'>
+    <div class='clock'>
+    <div class="hand hour"></div>
+    <div class="hand min"></div>
+    <div class="hand seco"></div>
+      </div>
+    </div>
+      <script>
+      let hour=document.querySelector('.hour');
+      let min=document.querySelector('.min');
+      let sec=document.querySelector('.seco');
+      function timer(){
+        let now=new Date();
+        let seconds=now.getSeconds();
+        console.log(seconds);
+        let hours=now.getHours();
+        let minutes=now.getMinutes();
+        let secdeg= ((seconds/60)*360)+90;
+        sec.style.transform=`rotate(${secdeg}deg)`;
+        let mindeg=((minutes/60)*360)+((seconds/60)*6)+90;
+        min.style.transform=`rotate(${mindeg}deg)`;
+        let hourdeg=((hours/12)*360)+((minutes/60)*30)+90;
+        hour.style.transform=`rotate(${hourdeg}deg)`;
+      }
+        setInterval(timer,1000);
+        timer();
+      </script>
+  </body>
+</html>
