@@ -1,2 +1,3 @@
 # Js-clock
-Realtime clock rendered using js
+This is a realtime clock rendered using HTML,CSS and JS.
+![](image/img.png)
